@@ -14,9 +14,9 @@
 
 */
 
-			/********************************************
-						   S E T U P - C S S 
-			*********************************************/
+    /***********************
+        S E T U P - C S S 
+    ************************/
 
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
 
@@ -56,9 +56,9 @@ img {
     transition: 0.5s all;
 }
 
-			/*****************************************
-						    H E A D E R   
-			******************************************/
+    /*****************
+        H E A D E R   
+    ******************/
 
 header {
     background-image: url(../assets/image-1@2x.png);
@@ -150,7 +150,6 @@ i.fa-twitter:hover {
 	color: #00aced;
 }
 
-
 .mainLogo {
     width: 40%;
     padding-top: 30vh;
@@ -176,20 +175,20 @@ i.fa-twitter:hover {
     font-weight: 300;
 }
 
-
-			/*****************************************
-					    S E C T I O N  O N E   
-            ******************************************/
-
-
+    /**************************
+        S E C T I O N  O N E   
+    ***************************/
 
 .newsArticleImgs,
 .productHighlights {
     width: 100%;
     padding: 9% 0;
 }
+
 .productHighlights {
     padding-top: 0;
+    position: relative;
+    min-height: 300px;
 }
 
 .imgRow img {
@@ -202,7 +201,7 @@ i.fa-twitter:hover {
     margin: 0 40px;
 }
 
-h2.articleHeader {
+.articleHeader {
     text-align: center;
     font-family: 'Kanit', sans-serif;
     font-size: 42px;
@@ -213,12 +212,6 @@ h2.articleHeader {
     padding-top: 5%;
     margin-bottom: 0;
     color: #0b0b0b;
-}
-
-.productHighlights {
-    width: 100%;
-    position: relative;
-    min-height: 300px;
 }
 
 .productImage {
@@ -281,10 +274,9 @@ input[type=submit]:hover {
 }
 
 
-			/*****************************************
-					    S E C T I O N  T W O  
-            ******************************************/
-
+    /**************************
+        S E C T I O N  T W O  
+    ***************************/
 
 .modelsContainer {
     width: 100%;
@@ -306,11 +298,11 @@ input[type=submit]:hover {
     width: 75%;
 }
 
-.modelDescription.one {
+.first {
     padding: 135px 5% 0 10%;
 }
 
-.modelDescription.two {
+.second {
     padding: 140px 10% 0 5%;
 }
 
@@ -330,9 +322,9 @@ input[type=submit]:hover {
     display: none;
 }
 
-			/*****************************************
-					    S E C T I O N  T H R E E 
-            ******************************************/
+/******************************
+    S E C T I O N  T H R E E 
+*******************************/
 
 .iconContain {
     background-image: url(../assets/image-5.png);
@@ -370,9 +362,10 @@ input[type=submit]:hover {
     font-style: normal;
 }
 
-			/*****************************************
-					        F O O T E R  
-            ******************************************/
+/******************
+    F O O T E R  
+*******************/
+
 footer {
     background-color: #6c0918;
     width: 100%;
@@ -437,7 +430,7 @@ input[type=submit] {
 .contact {
     width: 35%;
     float: left;
-    padding: 0 0 0 8%;
+    padding-left: 8%;
 }
 
 .footerNav {
@@ -485,9 +478,9 @@ input[type=submit] {
     color: red;
 }
 
-			/*********************************************
-						M E D I A  Q U E R I E S :  
-            **********************************************/
+/*******************************
+    M E D I A  Q U E R I E S :  
+********************************/
      
 @media (max-width: 1500px) {
 
@@ -505,11 +498,11 @@ input[type=submit] {
         margin-top: 4%;
     }
 
-    .modelDescription.one,
-    .modelDescription.two {
+    .modelDescription {
         padding-top: 100px;
     }
 }
+
 
 @media (max-width: 1300px) {
 
@@ -517,15 +510,14 @@ input[type=submit] {
         bottom: 20vh;
     }
 
-    .modelDescription.one,
-    .modelDescription.two {
+    .modelDescription {
         padding-top: 50px;
     }
 
     .modelDescription h2 {
         width: 100%;
     }
-
+    
 }
 
 @media (max-width: 1193px) {
@@ -545,20 +537,12 @@ input[type=submit] {
 
     .productDescription p,
     .modelDescription p {
-        font-size: 15px;
+        font-size: 14px;
         padding-bottom: 3%;
     }
 
-    .modelDescription.one,
-    .modelDescription.two {
+    .modelDescription {
         width: 30%;
-    }
-
-    .modelDescription.one {
-        padding: 3%;
-    }
-
-    .modelDescription.two {
         padding: 3%;
     }
 
@@ -674,13 +658,11 @@ input[type=submit] {
         padding-bottom: 5%;
     }
 
-    .modelDescription.one h2,
-    .modelDescription.two h2 {
+    .modelDescription h2 {
         text-align: center;
     }
     
-    .modelDescription.one,
-    .modelDescription.two {
+    .modelDescription {
         width: 100%;
         text-align: center;
     }
@@ -849,9 +831,13 @@ input[type=submit] {
         padding-bottom: 22px;
     }
 
-    .modelDescription.one,
-    .modelDescription.two {
+    .modelDescription {
         padding: 35px 0;
+    }
+
+    .modelDescription p {
+        padding: 0 4% 4%;
+        margin-top: 5px;
     }
 
     .productDescription .readMoreButton a {
@@ -876,6 +862,10 @@ input[type=submit] {
         font-size: 27.3px;
     }
 
+    .icon i {
+        font-size: 50px;
+    }
+
     .footerContainer {
         padding: 33px 7px;
     }
@@ -898,7 +888,7 @@ input[type=submit] {
 
 @media (max-width: 320px) {
 
-     .modelDescription p  {
+     .modelDescription p {
          font-size: 15px;
      }
 

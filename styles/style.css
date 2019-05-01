@@ -829,10 +829,11 @@ input[type=submit] {
     .modelDescription p {
         font-size: 18px;
         padding-bottom: 22px;
+        line-height: 1.61;
     }
 
     .modelDescription {
-        padding: 35px 0;
+        padding: 45px 0 30px;
     }
 
     .modelDescription p {
@@ -856,6 +857,7 @@ input[type=submit] {
 
     .iconContain {
         padding: 8% 0;
+        margin-top: 4%;
     }
 
     .icon a {

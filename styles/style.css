@@ -1,11 +1,16 @@
 /* 	S E T U P  I N F O
 
     ** FONTS **
-    
     'Catamaran', sans-serif;
     'Kanit', sans-serif;
     'Lato', sans-serif;
     'Roboto', sans-serif;
+    
+    ** COLOURS **
+    White : #fcfbfb;
+    Black : #0b0b0b;
+    Wine-red : #6c0918;
+    Lipstick : #cc1d36;
 
 */
 
@@ -56,11 +61,15 @@ img {
 			******************************************/
 
 header {
-    background-image: url(../assets/image-1.png);
+    background-image: url(../assets/image-1@2x.png);
     background-size: cover;
     height: 100vh;
     width: 100%;
     overflow: hidden;
+}
+
+.mobileMenu {
+    display: none;
 }
 
 .navHeader {
@@ -72,7 +81,7 @@ header {
 }
 
 .navLogoSmall a {
-    color: white;
+    color:#FFF;
     text-transform: uppercase;
     font-size: 25.5px;
     font-family: 'Kanit', sans-serif;
@@ -100,7 +109,7 @@ header {
     font-family: 'Catamaran', sans-serif;
     font-weight: 600;
     text-transform: uppercase;
-    color: white;
+    color: #fcfcfc;
     line-height: 1.61;
     font-size: 18px;
 }
@@ -115,7 +124,7 @@ header {
     float: right;
     position: relative;
     bottom: 10vh;
-    right: 2vw;
+    right: 3vw;
 }
 
 .socials {
@@ -123,7 +132,7 @@ header {
 }
 
 .socialIcons i {
-    color: white;
+    color: #fcfcfc;
     padding: 8px;
     font-size: 1.2rem;
 }
@@ -160,7 +169,7 @@ i.fa-twitter:hover {
 
 .mainLogo h2 {
     font-size: 31px;
-    color: white;
+    color: #fcfcfc;
     font-family: 'Lato', sans-serif;
     line-height: 1.02;
     letter-spacing: 0.3px;
@@ -222,10 +231,6 @@ h2.articleHeader {
     float: left;
     width: 75%;
     padding-left: 40px;
-    /* position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px; */
 }
 
 .productDescription h2 {
@@ -233,7 +238,6 @@ h2.articleHeader {
     margin-top: 0;
     text-align: left;
     line-height: 1;
-   
 }
 
 .productDescription p,
@@ -255,14 +259,13 @@ h2.articleHeader {
 input[type=submit] {
     padding: 10px 15px;
     background-color: #ba0621;
-    color: white;
+    color: #fcfcfc;
     font-family: 'Kanit', sans-serif;
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
     line-height: 1.45;
     text-align: center;
-    color: #fcfbfb;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -272,6 +275,11 @@ input[type=submit]:hover {
     letter-spacing: 2px;
     font-style: normal;
 }
+
+.readMoreButton a:hover {
+    border: 2.5px solid black;
+}
+
 
 			/*****************************************
 					    S E C T I O N  T W O  
@@ -309,11 +317,17 @@ input[type=submit]:hover {
 .modelImg {
     width: 50%;
     float: left;
-    background-color: black;
 }
 
+.modelImg.two {
+    background-color: black;
+}
 .modelImg img {
     display: block;
+}
+
+.mobileModelImg {
+    display: none;
 }
 
 			/*****************************************
@@ -554,9 +568,11 @@ input[type=submit] {
 
 }
 
-						/* (  < 9 4 0 p x  ) 
-                 Portrait tablet / small desktops */
 @media (max-width: 940px) {
+
+    header {
+        background-position: 30%;
+    }
 
     .mainLogo h1 {
         font-size: 100px;
@@ -580,17 +596,30 @@ input[type=submit] {
         font-size: 15px;
     }
 
-    footer 
+    .contact {
+        width: 50%;
+    }
 
-    
+    .form {
+        width: 80%;
+    }
+
+    .footerNav {
+        width: 100%;
+        margin-top: 5%;  
+    }
+
+    .footerNav li {
+        float: left;
+        padding: 0 5%;
+    }
 }
 
-
-
-						/* (  < 7 6 8 p x  )
-                Landscape phone to Portrait Tablet */
-
 @media (max-width: 768px) {
+    
+    header {
+        background-position: 20%;
+    }
 
     .navLogoSmall {
         display: none;
@@ -631,22 +660,249 @@ input[type=submit] {
         padding-bottom: 20px;
     }
 
-}
+    .mobileModelImg {
+        display: block;
+    }
 
-@media (max-width: 940px) {
+    .modelImg {
+        display: none;
+    }
+
+    .modelsContainer {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 5%;
+    }
+
+    .modelDescription.one h2,
+    .modelDescription.two h2 {
+        text-align: center;
+    }
     
+    .modelDescription.one,
+    .modelDescription.two {
+        width: 100%;
+        text-align: center;
+    }
+
+    .readMoreButton {
+        margin-top: 0;
+    }
+
 }
 
-						/*  (  < 4 0 0 p x  )
-                      Landscape phones and down  */
+@media (max-width: 700px) {
+
+    .socialIcons {
+        bottom: 30vh;
+    }
+
+    .footerContainer {
+        padding-top: 50px;
+    }
+    .contact {
+        width: 100%;
+        padding-left: 0;
+        margin: 0 auto;
+        clear: both;
+        text-align: center;
+    }
+
+    .stayUpdated {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 3%;
+    }
+}
+
                       
-@media (max-width: 940px) {
+@media (max-width: 630px) {
+    .contact {
+        float: left;
+        width: 70%;
+        text-align: left;
+    }
+
+    .footerNav {
+        width: 25%;
+        float: right;
+        margin-top: 0;
+    }
+
+    .footerNav ul {
+        text-align: right;
+        float: right;
+    }
+
+    .footerNav li {
+        float: right;
+        padding-bottom: 3%;
+    }
+
+    .form {
+        width: 100%;
+        margin-bottom: 3%;
+    }
+
+    input[type=email] {
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+        color: #232323;
+    }
+
+    input[type=submit] {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+
+}
+                      
+@media (max-width: 500px) {
+
+    header {
+        background-position: 30%;
+    }
+
+    .mobileMenu {
+        display: block;
+        width: 40px;
+        height: 23px;
+        object-fit: contain;
+        float: right;
+        margin: 5%;
+    }
+
+    .mainLogo {
+        width: 60%;
+        padding-top: 45vh;
+    }
+    .mainLogo h1 {
+        font-size: 65.1px;
+    }
+
+    .mainLogo h2 {
+        font-size: 17.4px;
+    }
+    .socialIcons {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
+    }
     
+    .icon {
+        width: 100%;
+        clear: both;
+        padding: 10% 0;
+    }
+    .iconContain {
+        background-position: 50%;
+        background-repeat: no-repeat;
+        background-color: black;
+    } 
 }
 
-						/*  (  < 3 2 0 p x  )
-                      Smallest Size (iphone5)  */
-                      
-@media (max-width: 940px) {
-    
+
+@media (max-width: 400px) {
+
+    .wrapper {
+        width: 95%;
+    }
+
+    header {
+        background-position: 35%;
+    }
+
+    .mainLogo {
+        width: 60%;
+        padding-top: 35vh;
+        padding-left: 7%;
+    }  
+
+    h2.articleHeader {
+        padding-top: 10px;
+    }
+
+    .imgRow:nth-of-type(3) {
+        display: none;
+    }
+
+    .productHighlights {
+        margin-top: 60px;
+    }
+
+    .productDescription {
+        padding-top: 0;
+    }
+
+    .productDescription h2,
+    .modelDescription h2 {
+        font-size: 29px;
+    }
+
+    .productDescription p,
+    .modelDescription p {
+        font-size: 18px;
+        padding-bottom: 22px;
+    }
+
+    .modelDescription.one,
+    .modelDescription.two {
+        padding: 35px 0;
+    }
+
+    .productDescription .readMoreButton a {
+        padding: 17px 30px;
+    }
+
+    .modelsContainer {
+        margin: 0;
+        width: 100%;
+        padding: 5% 0;
+    }
+
+    .mobileModelImg img {
+        width: 100%;
+    }
+
+    .iconContain {
+        padding: 8% 0;
+    }
+
+    .icon a {
+        font-size: 27.3px;
+    }
+
+    .footerContainer {
+        padding: 33px 7px;
+    }
+
+    .stayUpdated p,
+    .contact p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    footer h4 {
+        margin-bottom: 5%;
+    }
+
+    .bottomFooter p {
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+     .modelDescription p  {
+         font-size: 15px;
+     }
+
+     .footerNav {
+         padding-top: 35px;
+     }
 }

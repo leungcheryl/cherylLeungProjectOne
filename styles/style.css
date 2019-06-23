@@ -66,6 +66,7 @@ header {
     height: 100vh;
     width: 100%;
     overflow: hidden;
+    position: relative;
 }
 
 .mobileMenu {
@@ -122,8 +123,8 @@ header {
 
 .socialIcons {
     float: right;
-    position: relative;
-    bottom: 10vh;
+    position: absolute;
+    bottom: 6vh;
     right: 3vw;
 }
 
@@ -506,10 +507,6 @@ input[type=submit] {
 
 @media (max-width: 1300px) {
 
-    .socialIcons {
-        bottom: 20vh;
-    }
-
     .modelDescription {
         padding-top: 50px;
     }
@@ -675,9 +672,9 @@ input[type=submit] {
 
 @media (max-width: 700px) {
 
-    .socialIcons {
+    /* .socialIcons {
         bottom: 30vh;
-    }
+    } */
 
     .footerContainer {
         padding-top: 50px;
